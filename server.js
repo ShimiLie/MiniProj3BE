@@ -3,6 +3,7 @@ const app = express()
 // initializing backend
 
 require("dotenv").config()
+let dbConnect = require("./config/dbConnect")
 
 app.use(express.json());
 
