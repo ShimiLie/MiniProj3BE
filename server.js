@@ -1,11 +1,14 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+
 // initializing backend
 
 require("dotenv").config();
 let dbConnect = require("./dbConnect");
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.json({ message: "Doing miniproj 3" });
