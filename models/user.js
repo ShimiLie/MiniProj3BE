@@ -7,7 +7,7 @@ User.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true, //allow null if you do not add into your useState for addition
       autoIncrement: true,
       primaryKey: true,
     },
@@ -36,7 +36,7 @@ User.init(
   {
     sequelize: sequelizeInstance,
     modelName: "users", //use lowercase plural format
-    timestamps: true,
+    timestamps: false,
     freezeTableName: true,
   }
 );

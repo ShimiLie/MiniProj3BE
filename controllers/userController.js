@@ -36,6 +36,7 @@ const updateUser = (data, res) => {
   Models.User.update(data, { where: { id: data.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
+      console.log(data);
     })
     .catch((err) => {
       throw err;

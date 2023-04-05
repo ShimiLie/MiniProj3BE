@@ -21,11 +21,11 @@ router.post("/create", (req, res) => {
 // });
 
 router.put("/", (req, res) => {
-  console.log(req.params, req.body);
   Controllers.userController.updateUser(req.body, res);
+  console.log(req.body);
 });
 
-router.delete("/delete/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
   console.log(req, res);
   Controllers.userController.deleteUser(req, res);
 });
